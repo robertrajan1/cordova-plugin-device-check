@@ -1,0 +1,40 @@
+{
+  "name": "cordova-plugin-device-check",
+  "version": "1.0.0",
+  "description": "Cordova plugin to use Apple DeviceCheck API for device token generation and fraud prevention",
+  "main": "www/devicecheck.js",
+  "scripts": {},
+  "keywords": [
+    "cordova",
+    "plugin",
+    "ios",
+    "devicecheck",
+    "apple",
+    "fraud-prevention",
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HealplugPxApp/cordova-plugin-device-check/issues"
+  },
+  "homepage": "https://github.com/HealplugPxApp/cordova-plugin-device-check#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HealplugPxApp/cordova-plugin-device-check.git"
+  },
+  "cordova": {
+    "id": "cordova-plugin-device-check",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "engines": {
+    "cordovaDependencies": {
+      ">=6.0.0": {
+        "cordova-ios": ">=6.0.0"
+      }
+    }
+  }
+}

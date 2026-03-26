@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-device-check"
+        version="1.0.0">
+  <name>DeviceCheck</name>
+  <description>Cordova plugin to use Apple DeviceCheck API for device token generation and fraud prevention</description>
+  <license>MIT</license>
+  <keywords>cordova,plugin,ios,devicecheck,apple,fraud-prevention</keywords>
+  <repo>https://github.com/HealplugPxApp/cordova-plugin-device-check.git</repo>
+  <issue>https://github.com/HealplugPxApp/cordova-plugin-device-check/issues</issue>
+
+  <js-module src="www/devicecheck.js" name="DeviceCheck">
+    <clobbers target="DeviceCheck"/>
+  </js-module>
+
+  <platform name="ios">
+    <header-file src="src/ios/Bridging-Header.h" type="BridgingHeader"/>
+    <source-file src="src/ios/DeviceCheckPlugin.swift"/>
+    <framework src="DeviceCheck.framework"/>
+    <config-file target="config.xml" parent="/*">
+      <feature name="DeviceCheckPlugin">
+        <param name="ios-package" value="DeviceCheckPlugin"/>
+      </feature>
+    </config-file>
+    <config-file parent="com.apple.developer.devicecheck" target="*-Debug.plist">
+      <true/>
+    </config-file>
+    <config-file parent="com.apple.developer.devicecheck" target="*-Release.plist">
+      <true/>
+    </config-file>
+  </platform>
+
+  <engines>
+    <engine name="cordova-ios" version=">=6.0.0"/>
+  </engines>
+</plugin>
